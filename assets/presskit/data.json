@@ -1,0 +1,24 @@
+﻿{
+  "companhia": "Companhia de Teatro Palco Mambembe",
+  "fundacao": 2016,
+  "espetaculos": [
+    {
+      "id": "o-auto-da-mambembe",
+      "titulo": "O Auto da Mambembe",
+      "ano": 2022,
+      "sinopse": "Uma celebração poética do teatro mambembe e da cultura popular brasileira.",
+      "capa": "assets/images/espetaculos/peca-1/capa.svg",
+      "presskit_zip": "assets/presskit/downloads/auto-mambembe-press.zip",
+      "release_pdf": "assets/presskit/releases/auto-mambembe-release.pdf"
+    },
+    {
+      "id": "sombras-do-passado",
+      "titulo": "Sombras do Passado",
+      "ano": 2024,
+      "sinopse": "Drama contemporâneo que explora a memória e o tempo no palco.",
+      "capa": "assets/images/espetaculos/peca-2/capa.svg",
+      "presskit_zip": "assets/presskit/downloads/sombras-press.zip",
+      "release_pdf": "assets/presskit/releases/sombras-release.pdf"
+    }
+  ]
+}

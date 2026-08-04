@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Galeria visual dos espetáculos da Companhia de Teatro Palco Mambembe.">
+  <title>Galeria - Cortina Aberta</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <h1>Cortina Aberta</h1>
+        <p>Palco Mambembe · arte, memória e espetáculo</p>
+      </div>
+
+      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-nav" aria-label="Navegação principal">
+        <a href="index.html">Home</a>
+        <a href="historico.html">Histórico</a>
+        <a href="galeria.html" aria-current="page">Galeria</a>
+        <a href="presskit.html">Press Kit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container">
+    <section class="hero" aria-labelledby="galeria-hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">Galeria</p>
+        <h2 id="galeria-hero-title">Espetáculos em imagens</h2>
+        <p>Uma seleção visual que revela a luz, o corpo e a poesia do palco.</p>
+      </div>
+
+      <div class="hero-panel" aria-hidden="true">
+        <img
+          class="hero-image lazy-load"
+          src="assets/images/placeholder/image-placeholder.svg"
+          alt="Galeria do Palco Mambembe"
+          loading="lazy"
+          decoding="async"
+          onerror="this.onerror=null;this.src='assets/images/placeholder/image-placeholder.svg'"
+        />
+      </div>
+    </section>
+
+    <section class="section-content" aria-labelledby="galeria-title">
+      <div class="section-title">
+        <h2 id="galeria-title">Galeria de espetáculos</h2>
+        <p>Uma seleção visual dos principais momentos do repertório da companhia.</p>
+      </div>
+
+      <div class="masonry-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Palco Mambembe · Cortina Aberta</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

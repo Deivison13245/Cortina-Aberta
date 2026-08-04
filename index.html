@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Site institucional da Companhia de Teatro Palco Mambembe, com histórico, galeria e press kit.">
+  <title>Cortina Aberta | Palco Mambembe</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <h1>Cortina Aberta</h1>
+        <p>Palco Mambembe · Arte, Memória e Espetáculo</p>
+      </div>
+
+      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-nav" aria-label="Navegação principal">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="historico.html">Histórico</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="presskit.html">Press Kit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="eyebrow">Companhia de Teatro</p>
+        <h2 id="hero-title">Palco Mambembe: um universo visual em cena</h2>
+        <p>Mais de 10 anos de trajetória teatral reunidos em uma galeria digital elegante, com foco em imagens impactantes e storytelling visual.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="galeria.html">Ver galeria</a>
+          <a class="btn btn-secondary" href="historico.html">Conhecer a trajetória</a>
+        </div>
+      </div>
+
+      <div class="hero-panel" aria-hidden="true">
+        <img
+          class="hero-image lazy-load"
+          src="assets/images/placeholder/image-placeholder.svg"
+          data-src="https://images.unsplash.com/photo-1503095396549-807759245b35?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0"
+          alt="Palco iluminado com cortinas avermelhadas, cena teatral em destaque"
+          loading="lazy"
+          decoding="async"
+          onerror="this.onerror=null;this.src='assets/images/placeholder/image-placeholder.svg'"
+        />
+      </div>
+    </section>
+
+    <section class="section-content" aria-labelledby="destaques-title">
+      <div class="section-title">
+        <h2 id="destaques-title">Por que visitar a Cortina Aberta?</h2>
+        <p>Uma experiência visual que celebra a cena, a memória e a pesquisa estética das trupes.</p>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Portfólio refinado</h3>
+          <p>Uma experiência visual inspirada em teatro, cinema e arte contemporânea.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Memória institucional</h3>
+          <p>História da companhia apresentada com linguagem clara e elegante.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Press kit acessível</h3>
+          <p>Materiais para imprensa com downloads prontos para uso.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Palco Mambembe · Cortina Aberta</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
