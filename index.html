@@ -164,7 +164,13 @@ class="adopt-injector"></script>
           <p>Envie sua mensagem e entraremos em contato.</p>
         </div>
 
-        <form id="contato-form" class="contact-form">
+        <form
+          id="contato-form"
+          class="contact-form"
+          action="https://script.google.com/macros/s/AKfycbwfE9PINRQYXOedF_WqjxtwnV5z8lcmfQ_2T4yY2WzVF0JPgU_v48ezY9gij7Im45e4rw/exec"
+          method="POST"
+          target="hidden_iframe"
+        >
           <label>
             Nome
             <input type="text" name="nome" required />
@@ -182,6 +188,8 @@ class="adopt-injector"></script>
 
           <button type="submit">Enviar</button>
         </form>
+
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
         <div class="contact-info">
           <p>Endereço: Av. Ver. João Silva, 38 - Centro, Santo Antônio de Jesus - BA, 44430-072</p>
@@ -221,17 +229,6 @@ class="adopt-injector"></script>
         </div>
       </div>
     </div>
-
-    <div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
 
     <script src="assets/js/main.js"></script>
     <script>
@@ -347,7 +344,7 @@ class="adopt-injector"></script>
           contatoForm.addEventListener("submit", async function (event) {
             event.preventDefault();
             const endpoint =
-              "https://script.google.com/macros/s/AKfycbzszhf6pcymdB_z0Tt2Si3u6r-HYhPqeB1eBGb3X5u_bConzwgQys97NXO6GTyK7Ptq8Q/exec";
+              "https://script.google.com/macros/s/AKfycbwfE9PINRQYXOedF_WqjxtwnV5z8lcmfQ_2T4yY2WzVF0JPgU_v48ezY9gij7Im45e4rw/exec";
             const formData = new URLSearchParams(new FormData(contatoForm));
 
             try {
@@ -371,10 +368,16 @@ class="adopt-injector"></script>
       });
     </script>
 
-    <div vw class="enabled"></div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
     </script>
   </body>
 </html>

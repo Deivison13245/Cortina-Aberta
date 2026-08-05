@@ -84,7 +84,6 @@ function renderPageContent() {
 
 function renderHeroImage() {
   const heroImageElement = document.querySelector('.hero-panel img');
-
   if (!heroImageElement) return;
 
   heroImageElement.classList.add('lazy-load');
@@ -140,7 +139,6 @@ function renderTimelineItems() {
 
 function initLazyImages() {
   const lazyImages = document.querySelectorAll('img.lazy-load');
-
   if (!lazyImages.length) return;
 
   const loadImage = (image) => {
@@ -291,7 +289,7 @@ function escapeHtml(value) {
 
 function initMobileMenu() {
   const btn = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.primary-nav'); // CORREÇÃO
+  const nav = document.querySelector('.primary-nav');
   if (!btn || !nav) return;
 
   btn.addEventListener('click', () => {
@@ -316,3 +314,4 @@ function initMobileMenu() {
     }
   });
 }
+
