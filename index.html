@@ -7,17 +7,20 @@
       name="description"
       content="Site institucional da Companhia de Teatro Palco Mambembe, com histórico, galeria e press kit."
     />
-    <meta name="adopt-website-id" content="d6d87eef-5dee-43bc-a8ec-51c1b37114d2" />
-<script src="//tag.goadopt.io/injector.js?website_code=d6d87eef-5dee-43bc-a8ec-51c1b37114d2" 
-class="adopt-injector"></script>
+    <meta
+      name="adopt-website-id"
+      content="d6d87eef-5dee-43bc-a8ec-51c1b37114d2"
+    />
+    <script async src="https://tag.goadopt.io/injector.js?website_code=d6d87eef-5dee-43bc-a8ec-51c1b37114d2"></script>
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
           dl = l != "dataLayer" ? "&l=" + l : "";
+        var j = d.createElement(s);
         j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
@@ -25,135 +28,132 @@ class="adopt-injector"></script>
     </script>
     <!-- End Google Tag Manager -->
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-4KH9KJ8TB2"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4KH9KJ8TB2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-4KH9KJ8TB2");
     </script>
 
     <title>Cortina Aberta | Palco Mambembe</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-KDWW36FC"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
 
+  <body>
     <header>
       <div class="header-inner">
         <div class="brand">
           <h1>Cortina Aberta</h1>
-          <p>Palco Mambembe · Arte, Memória e Espetáculo</p>
+          <p>Palco Mambembe</p>
         </div>
 
-        <button
-          class="menu-toggle"
-          aria-controls="primary-navigation"
-          aria-expanded="false"
-          aria-label="Abrir menu"
-        >
-          <span class="hamburger" aria-hidden="true"></span>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu">
+          <span class="hamburger"></span>
         </button>
 
-        <nav
-          id="primary-navigation"
-          class="primary-nav"
-          aria-label="Navegação principal"
-        >
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="historico.html">Histórico</a>
-          <a href="galeria.html">Galeria</a>
-          <a href="presskit.html">Press Kit</a>
+        <nav id="primary-navigation" class="primary-nav">
+          <a href="#home">Home</a>
+          <a href="#historia">História</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#presskit">Press Kit</a>
+          <a href="#contato">Contato</a>
         </nav>
       </div>
     </header>
 
-    <main id="conteudo-principal" class="container">
-      <section class="hero" aria-labelledby="hero-title">
+    <main id="conteudo-principal">
+      <section id="home" class="page-section hero">
         <div class="hero-content">
-          <p class="eyebrow">Companhia de Teatro</p>
-          <h2 id="hero-title">Palco Mambembe: um universo visual em cena</h2>
+          <span class="eyebrow">Palco Mambembe</span>
+          <h2>Uma experiência visual que celebra cena, memória e pesquisa estética.</h2>
           <p>
-            Mais de 10 anos de trajetória teatral reunidos em uma galeria
-            digital elegante, com foco em imagens impactantes e storytelling
-            visual.
+            Mais de 10 anos de trajetória teatral reunidos em um ambiente digital elegante, com foco em imagens impactantes e storytelling visual.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="galeria.html">Ver galeria</a>
-            <a class="btn btn-secondary" href="historico.html"
-              >Conhecer a trajetória</a
-            >
+            <a class="btn btn-primary" href="#galeria">Ver galeria</a>
+            <a class="btn btn-secondary" href="#contato">Fale conosco</a>
           </div>
         </div>
-
-        <div class="hero-panel" aria-hidden="true">
-          <img
-            class="hero-image lazy-load"
-            src="assets/images/placeholder/image-placeholder.svg"
-            data-src="https://images.unsplash.com/photo-1503095396549-807759245b35?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0"
-            alt="Palco iluminado com cortinas avermelhadas, cena teatral em destaque"
-            loading="lazy"
-            decoding="async"
-            onerror="
-              this.onerror = null;
-              this.src = 'assets/images/placeholder/image-placeholder.svg';
-            "
-          />
+        <div class="hero-panel">
+          <img src="assets/images/hero-banner.jpg" alt="Cortina Aberta no palco" />
         </div>
       </section>
 
-      <section class="section-content" aria-labelledby="destaques-title">
+      <section id="historia" class="page-section">
         <div class="section-title">
-          <h2 id="destaques-title">Por que visitar a Cortina Aberta?</h2>
-          <p>
-            Uma experiência visual que celebra a cena, a memória e a pesquisa
-            estética das trupes.
-          </p>
+          <h2>História</h2>
+          <p>Conheça a trajetória da companhia em um único fluxo dentro da página principal.</p>
         </div>
+        <div class="section-content">
+          <div class="info-grid">
+            <article class="info-card">
+              <h3>Fundação</h3>
+              <p>Breve descrição da origem da companhia e seus primeiros passos.</p>
+            </article>
+            <article class="info-card">
+              <h3>Projetos</h3>
+              <p>Detalhes sobre espetáculos, residências artísticas e colaborações.</p>
+            </article>
+            <article class="info-card">
+              <h3>Memória</h3>
+              <p>Passagens importantes e registros de momentos marcantes.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <div class="info-grid">
-          <article class="info-card">
-            <h3>Portfólio refinado</h3>
-            <p>
-              Uma experiência visual inspirada em teatro, cinema e arte
-              contemporânea.
-            </p>
+      <section id="galeria" class="page-section">
+        <div class="section-title">
+          <h2>Galeria</h2>
+          <p>Banners interativos que abrem carrossel com mais imagens e contexto do evento.</p>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card" data-gallery="1" style="background-image:url('assets/images/galeria-1.jpg')">
+            <div class="gallery-card-content">
+              <span>2024</span>
+              <h3>Espetáculo Luz & Sombra</h3>
+            </div>
           </article>
 
-          <article class="info-card">
-            <h3>Memória institucional</h3>
-            <p>
-              História da companhia apresentada com linguagem clara e elegante.
-            </p>
+          <article class="gallery-card" data-gallery="2" style="background-image:url('assets/images/galeria-2.jpg')">
+            <div class="gallery-card-content">
+              <span>2023</span>
+              <h3>Mostra Palco Vivo</h3>
+            </div>
           </article>
 
-          <article class="info-card">
-            <h3>Press kit acessível</h3>
-            <p>Materiais para imprensa com downloads prontos para uso.</p>
+          <article class="gallery-card" data-gallery="3" style="background-image:url('assets/images/galeria-3.jpg')">
+            <div class="gallery-card-content">
+              <span>2022</span>
+              <h3>Residência Encena</h3>
+            </div>
           </article>
         </div>
       </section>
 
-      <section class="section-content" aria-labelledby="contato-title">
+      <section id="presskit" class="page-section press-panel">
         <div class="section-title">
-          <h2 id="contato-title">Fale conosco</h2>
+          <h2>Press Kit</h2>
+          <p>Materiais para imprensa e divulgação, disponíveis para download.</p>
+        </div>
+        <div class="section-content">
+          <article class="press-card">
+            <img src="assets/images/presskit-cover.jpg" alt="Capa do press kit" class="press-card__cover" />
+            <div>
+              <h3>Download do press kit</h3>
+              <p>Baixe imagens, textos e materiais de apresentação para imprensa.</p>
+              <a class="btn btn-download" href="assets/downloads/presskit.zip" download>Baixar Press Kit</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contato" class="page-section contact-panel">
+        <div class="section-title">
+          <h2>Fale conosco</h2>
           <p>Envie sua mensagem e entraremos em contato.</p>
         </div>
 
@@ -170,73 +170,168 @@ class="adopt-injector"></script>
 
           <label>
             Mensagem
-            <textarea name="mensagem" rows="4" required></textarea>
+            <textarea name="mensagem" required></textarea>
           </label>
 
           <button type="submit">Enviar</button>
         </form>
 
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const form = document.getElementById("contato-form");
-            const endpoint =
-              "https://script.google.com/macros/s/AKfycbzszhf6pcymdB_z0Tt2Si3u6r-HYhPqeB1eBGb3X5u_bConzwgQys97NXO6GTyK7Ptq8Q/exec";
-
-            if (!form) return;
-
-            form.addEventListener("submit", async function (event) {
-              event.preventDefault();
-
-              const data = new URLSearchParams(new FormData(form));
-
-              try {
-                const response = await fetch(endpoint, {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-                  },
-                  body: data,
-                });
-
-                if (!response.ok) throw new Error("Status " + response.status);
-
-                alert("Dados enviados com sucesso!");
-                form.reset();
-              } catch (error) {
-                console.error("Erro no envio:", error);
-                alert("Erro ao enviar. Veja console do navegador.");
-              }
-            });
-          });
-        </script>
+        <div class="contact-info">
+          <p>Endereço: Av. Ver. João Silva, 38 - Centro, Santo Antônio de Jesus - BA, 44430-072</p>
+          <a
+            class="btn btn-secondary"
+            href="https://www.google.com/maps/search/?api=1&query=Av.+Ver.+Jo%C3%A3o+Silva,+38,+Santo+Ant%C3%B4nio+de+Jesus+BA"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Ver no Google Maps
+          </a>
+        </div>
       </section>
     </main>
 
     <footer>
       <p>© 2026 Palco Mambembe · Cortina Aberta</p>
-      <p>
-        <a
-          href="https://www.google.com/search?sca_esv=2d0f82e09bd2a808&sxsrf=APpeQnt7oSeF9g6MGZfoa4M2XgrMXsc-BQ:1785853553596&q=acesaj+endereço&ludocid=2117416704279308343&sa=X&ved=2ahUKEwiv9rr1loeWAxWsgWEGHV6hCJoQ6BN6BAgwEAI"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Av. Ver. João Silva, 38 - Centro, Santo Antônio de Jesus - BA,
-          44430-072
-        </a>
-      </p>
     </footer>
 
-    <script src="assets/js/main.js"></script>
-
-    <div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
+    <div class="modal" id="gallery-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close></div>
+      <div class="modal-dialog">
+        <button class="modal-close" data-close>Fechar</button>
+        <div class="modal-body">
+          <div class="modal-info">
+            <h3 id="modal-title">Evento</h3>
+            <p id="modal-description">História e contexto do evento.</p>
+            <a id="modal-download" class="btn btn-download" href="#" download>Download</a>
+          </div>
+          <div class="modal-carousel">
+            <img id="modal-image" src="assets/images/galeria-1.jpg" alt="Imagem do evento" />
+            <div class="carousel-controls">
+              <button type="button" id="prev-slide">Anterior</button>
+              <button type="button" id="next-slide">Próximo</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script src="assets/js/main.js"></script>
     <script>
-      new window.VLibras.Widget("https://vlibras.gov.br/app");
+      const galleries = {
+        1: {
+          title: "Espetáculo X",
+          description: "Contexto do espetáculo X, história, local e curiosidades.",
+          images: [
+            "assets/images/galeria-1.jpg",
+            "assets/images/galeria-1b.jpg",
+            "assets/images/galeria-1c.jpg"
+          ],
+          download: "assets/downloads/galeria-1.zip"
+        },
+        2: {
+          title: "Mostra Y",
+          description: "Contexto da Mostra Y, elenco e data de apresentação.",
+          images: [
+            "assets/images/galeria-2.jpg",
+            "assets/images/galeria-2b.jpg",
+            "assets/images/galeria-2c.jpg"
+          ],
+          download: "assets/downloads/presskit.zip"
+        },
+        3: {
+          title: "Exposição Z",
+          description: "Contexto da Exposição Z, processo criativo e fotos do evento.",
+          images: [
+            "assets/images/galeria-3.jpg",
+            "assets/images/galeria-3b.jpg",
+            "assets/images/galeria-3c.jpg"
+          ],
+          download: "assets/downloads/galeria-3.zip"
+        }
+      };
+
+      document.querySelectorAll(".gallery-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          const id = card.dataset.gallery;
+          const data = galleries[id];
+          if (!data) return;
+
+          const modal = document.getElementById("gallery-modal");
+          const modalTitle = modal.querySelector("#modal-title");
+          const modalDescription = modal.querySelector("#modal-description");
+          const modalImage = modal.querySelector("#modal-image");
+          const modalDownload = modal.querySelector("#modal-download");
+
+          let slideIndex = 0;
+
+          modalTitle.textContent = data.title;
+          modalDescription.textContent = data.description;
+          modalDownload.href = data.download;
+          modalImage.src = data.images[slideIndex];
+
+          modal.dataset.images = JSON.stringify(data.images);
+          modal.dataset.index = slideIndex;
+          modal.setAttribute("aria-hidden", "false");
+
+          document.body.classList.add("modal-open");
+          modal.classList.add("open");
+        });
+      });
+
+      document.querySelectorAll("[data-close]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const modal = document.getElementById("gallery-modal");
+          modal.classList.remove("open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("modal-open");
+        });
+      });
+
+      document.getElementById("prev-slide").addEventListener("click", () => {
+        const modal = document.getElementById("gallery-modal");
+        const images = JSON.parse(modal.dataset.images || "[]");
+        let index = Number(modal.dataset.index || 0);
+        if (!images.length) return;
+        index = index === 0 ? images.length - 1 : index - 1;
+        modal.dataset.index = index;
+        modal.querySelector("#modal-image").src = images[index];
+      });
+
+      document.getElementById("next-slide").addEventListener("click", () => {
+        const modal = document.getElementById("gallery-modal");
+        const images = JSON.parse(modal.dataset.images || "[]");
+        let index = Number(modal.dataset.index || 0);
+        if (!images.length) return;
+        index = index === images.length - 1 ? 0 : index + 1;
+        modal.dataset.index = index;
+        modal.querySelector("#modal-image").src = images[index];
+      });
+
+      const contatoForm = document.getElementById("contato-form");
+      contatoForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const endpoint = "https://script.google.com/macros/s/AKfycbzszhf6pcymdB_z0Tt2Si3u6r-HYhPqeB1eBGb3X5u_bConzwgQys97NXO6GTyK7Ptq8Q/exec";
+        const formData = new URLSearchParams(new FormData(contatoForm));
+
+        try {
+          const response = await fetch(endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+            },
+            body: formData
+          });
+
+          if (!response.ok) throw new Error("Erro " + response.status);
+          alert("Mensagem enviada com sucesso!");
+          contatoForm.reset();
+        } catch (error) {
+          console.error(error);
+          alert("Erro ao enviar. Verifique o console.");
+        }
+      });
     </script>
+    <div vw class="enabled"></div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   </body>
 </html>

@@ -291,7 +291,7 @@ function escapeHtml(value) {
 
 function initMobileMenu() {
   const btn = document.querySelector('.menu-toggle');
-  const nav = document.getElementById('primary-navigation');
+  const nav = document.querySelector('.primary-nav'); // CORREÇÃO
   if (!btn || !nav) return;
 
   btn.addEventListener('click', () => {
@@ -300,7 +300,6 @@ function initMobileMenu() {
     document.body.classList.toggle('no-scroll', opened);
   });
 
-  // fechar menu ao clicar em link
   nav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
@@ -309,7 +308,6 @@ function initMobileMenu() {
     });
   });
 
-  // fechar com ESC
   document.addEventListener('keydown', (ev) => {
     if (ev.key === 'Escape' && nav.classList.contains('open')) {
       nav.classList.remove('open');
