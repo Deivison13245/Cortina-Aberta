@@ -182,25 +182,36 @@
         </form>
 
         <script>
-          const form = document.getElementById("contato-form");
-          const endpoint =
-            "https://script.google.com/macros/s/AKfycbxy5fUw0s6gMnUdz6mrPH3j2Y3QlqBSSy-W9ziMje9FVd-A0twn7WqblTArcJHoVWyK-w/exec";
+          document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contato-form");
+            const endpoint =
+              "https://script.google.com/macros/s/AKfycbzszhf6pcymdB_z0Tt2Si3u6r-HYhPqeB1eBGb3X5u_bConzwgQys97NXO6GTyK7Ptq8Q/exec";
 
-          form.addEventListener("submit", async function (event) {
-            event.preventDefault();
+            if (!form) return;
 
-            const data = new FormData(form);
-            const response = await fetch(endpoint, {
-              method: "POST",
-              body: new URLSearchParams(data),
+            form.addEventListener("submit", async function (event) {
+              event.preventDefault();
+
+              const data = new URLSearchParams(new FormData(form));
+
+              try {
+                const response = await fetch(endpoint, {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+                  },
+                  body: data,
+                });
+
+                if (!response.ok) throw new Error("Status " + response.status);
+
+                alert("Dados enviados com sucesso!");
+                form.reset();
+              } catch (error) {
+                console.error("Erro no envio:", error);
+                alert("Erro ao enviar. Veja console do navegador.");
+              }
             });
-
-            if (response.ok) {
-              alert("Dados enviados com sucesso!");
-              form.reset();
-            } else {
-              alert("Erro ao enviar, tente novamente.");
-            }
           });
         </script>
       </section>
