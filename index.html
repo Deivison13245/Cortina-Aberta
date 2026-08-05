@@ -7,11 +7,12 @@
       name="description"
       content="Site institucional da Companhia de Teatro Palco Mambembe, com histórico, galeria e press kit."
     />
-    <meta
-      name="adopt-website-id"
-      content="d6d87eef-5dee-43bc-a8ec-51c1b37114d2"
-    />
-    <script async src="https://tag.goadopt.io/injector.js?website_code=d6d87eef-5dee-43bc-a8ec-51c1b37114d2"></script>
+    <meta name="adopt-website-id" content="d6d87eef-5dee-43bc-a8ec-51c1b37114d2" />
+    <script
+      async
+      src="https://tag.goadopt.io/injector.js?website_code=d6d87eef-5dee-43bc-a8ec-51c1b37114d2"
+      class="adopt-injector"
+    ></script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -43,6 +44,15 @@
   </head>
 
   <body>
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KDWW36FC"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe>
+    </noscript>
+
     <header>
       <div class="header-inner">
         <div class="brand">
@@ -50,7 +60,7 @@
           <p>Palco Mambembe</p>
         </div>
 
-        <button class="menu-toggle" type="button" aria-label="Abrir menu">
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
           <span class="hamburger"></span>
         </button>
 
@@ -168,7 +178,7 @@
             <input type="email" name="email" required />
           </label>
 
-          <label>
+          <label class="textarea-label">
             Mensagem
             <textarea name="mensagem" required></textarea>
           </label>
@@ -217,120 +227,142 @@
 
     <script src="assets/js/main.js"></script>
     <script>
-      const galleries = {
-        1: {
-          title: "Espetáculo X",
-          description: "Contexto do espetáculo X, história, local e curiosidades.",
-          images: [
-            "assets/images/galeria-1.jpg",
-            "assets/images/galeria-1b.jpg",
-            "assets/images/galeria-1c.jpg"
-          ],
-          download: "assets/downloads/galeria-1.zip"
-        },
-        2: {
-          title: "Mostra Y",
-          description: "Contexto da Mostra Y, elenco e data de apresentação.",
-          images: [
-            "assets/images/galeria-2.jpg",
-            "assets/images/galeria-2b.jpg",
-            "assets/images/galeria-2c.jpg"
-          ],
-          download: "assets/downloads/presskit.zip"
-        },
-        3: {
-          title: "Exposição Z",
-          description: "Contexto da Exposição Z, processo criativo e fotos do evento.",
-          images: [
-            "assets/images/galeria-3.jpg",
-            "assets/images/galeria-3b.jpg",
-            "assets/images/galeria-3c.jpg"
-          ],
-          download: "assets/downloads/galeria-3.zip"
-        }
-      };
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const primaryNav = document.querySelector("#primary-navigation");
 
-      document.querySelectorAll(".gallery-card").forEach((card) => {
-        card.addEventListener("click", () => {
-          const id = card.dataset.gallery;
-          const data = galleries[id];
-          if (!data) return;
-
-          const modal = document.getElementById("gallery-modal");
-          const modalTitle = modal.querySelector("#modal-title");
-          const modalDescription = modal.querySelector("#modal-description");
-          const modalImage = modal.querySelector("#modal-image");
-          const modalDownload = modal.querySelector("#modal-download");
-
-          let slideIndex = 0;
-
-          modalTitle.textContent = data.title;
-          modalDescription.textContent = data.description;
-          modalDownload.href = data.download;
-          modalImage.src = data.images[slideIndex];
-
-          modal.dataset.images = JSON.stringify(data.images);
-          modal.dataset.index = slideIndex;
-          modal.setAttribute("aria-hidden", "false");
-
-          document.body.classList.add("modal-open");
-          modal.classList.add("open");
-        });
-      });
-
-      document.querySelectorAll("[data-close]").forEach((button) => {
-        button.addEventListener("click", () => {
-          const modal = document.getElementById("gallery-modal");
-          modal.classList.remove("open");
-          modal.setAttribute("aria-hidden", "true");
-          document.body.classList.remove("modal-open");
-        });
-      });
-
-      document.getElementById("prev-slide").addEventListener("click", () => {
-        const modal = document.getElementById("gallery-modal");
-        const images = JSON.parse(modal.dataset.images || "[]");
-        let index = Number(modal.dataset.index || 0);
-        if (!images.length) return;
-        index = index === 0 ? images.length - 1 : index - 1;
-        modal.dataset.index = index;
-        modal.querySelector("#modal-image").src = images[index];
-      });
-
-      document.getElementById("next-slide").addEventListener("click", () => {
-        const modal = document.getElementById("gallery-modal");
-        const images = JSON.parse(modal.dataset.images || "[]");
-        let index = Number(modal.dataset.index || 0);
-        if (!images.length) return;
-        index = index === images.length - 1 ? 0 : index + 1;
-        modal.dataset.index = index;
-        modal.querySelector("#modal-image").src = images[index];
-      });
-
-      const contatoForm = document.getElementById("contato-form");
-      contatoForm.addEventListener("submit", async (event) => {
-        event.preventDefault();
-        const endpoint = "https://script.google.com/macros/s/AKfycbzszhf6pcymdB_z0Tt2Si3u6r-HYhPqeB1eBGb3X5u_bConzwgQys97NXO6GTyK7Ptq8Q/exec";
-        const formData = new URLSearchParams(new FormData(contatoForm));
-
-        try {
-          const response = await fetch(endpoint, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
-            },
-            body: formData
+        if (menuToggle && primaryNav) {
+          menuToggle.addEventListener("click", function () {
+            const opened = primaryNav.classList.toggle("open");
+            menuToggle.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", opened ? "true" : "false");
+            document.body.classList.toggle("no-scroll", opened);
           });
 
-          if (!response.ok) throw new Error("Erro " + response.status);
-          alert("Mensagem enviada com sucesso!");
-          contatoForm.reset();
-        } catch (error) {
-          console.error(error);
-          alert("Erro ao enviar. Verifique o console.");
+          primaryNav.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+              primaryNav.classList.remove("open");
+              menuToggle.classList.remove("open");
+              menuToggle.setAttribute("aria-expanded", "false");
+              document.body.classList.remove("no-scroll");
+            });
+          });
+        }
+
+        const galleries = {
+          1: {
+            title: "Espetáculo Luz & Sombra",
+            description: "Contexto do Espetáculo Luz & Sombra, história, visual e bastidores.",
+            images: [
+              "assets/images/galeria-1.jpg",
+              "assets/images/galeria-1b.jpg",
+              "assets/images/galeria-1c.jpg"
+            ],
+            download: "assets/downloads/galeria-1.zip"
+          },
+          2: {
+            title: "Mostra Palco Vivo",
+            description: "Contexto da Mostra Palco Vivo, elenco e criação.",
+            images: [
+              "assets/images/galeria-2.jpg",
+              "assets/images/galeria-2b.jpg",
+              "assets/images/galeria-2c.jpg"
+            ],
+            download: "assets/downloads/galeria-2.zip"
+          },
+          3: {
+            title: "Residência Encena",
+            description: "Contexto da Residência Encena, pesquisa e experiências em cena.",
+            images: [
+              "assets/images/galeria-3.jpg",
+              "assets/images/galeria-3b.jpg",
+              "assets/images/galeria-3c.jpg"
+            ],
+            download: "assets/downloads/galeria-3.zip"
+          }
+        };
+
+        document.querySelectorAll(".gallery-card").forEach(function (card) {
+          card.addEventListener("click", function () {
+            const id = card.dataset.gallery;
+            const data = galleries[id];
+            if (!data) return;
+
+            const modal = document.getElementById("gallery-modal");
+            const modalTitle = modal.querySelector("#modal-title");
+            const modalDescription = modal.querySelector("#modal-description");
+            const modalImage = modal.querySelector("#modal-image");
+            const modalDownload = modal.querySelector("#modal-download");
+
+            modalTitle.textContent = data.title;
+            modalDescription.textContent = data.description;
+            modalDownload.href = data.download;
+            modalImage.src = data.images[0];
+
+            modal.dataset.images = JSON.stringify(data.images);
+            modal.dataset.index = 0;
+            modal.setAttribute("aria-hidden", "false");
+            modal.classList.add("open");
+            document.body.classList.add("modal-open");
+          });
+        });
+
+        document.querySelectorAll("[data-close]").forEach(function (button) {
+          button.addEventListener("click", function () {
+            const modal = document.getElementById("gallery-modal");
+            modal.classList.remove("open");
+            modal.setAttribute("aria-hidden", "true");
+            document.body.classList.remove("modal-open");
+          });
+        });
+
+        function changeSlide(direction) {
+          const modal = document.getElementById("gallery-modal");
+          const images = JSON.parse(modal.dataset.images || "[]");
+          let index = Number(modal.dataset.index || 0);
+          if (!images.length) return;
+          index = direction === "prev" ? (index === 0 ? images.length - 1 : index - 1) : (index === images.length - 1 ? 0 : index + 1);
+          modal.dataset.index = index;
+          modal.querySelector("#modal-image").src = images[index];
+        }
+
+        document.getElementById("prev-slide").addEventListener("click", function () {
+          changeSlide("prev");
+        });
+
+        document.getElementById("next-slide").addEventListener("click", function () {
+          changeSlide("next");
+        });
+
+        const contatoForm = document.getElementById("contato-form");
+        if (contatoForm) {
+          contatoForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+            const endpoint =
+              "https://script.google.com/macros/s/AKfycbzszhf6pcymdB_z0Tt2Si3u6r-HYhPqeB1eBGb3X5u_bConzwgQys97NXO6GTyK7Ptq8Q/exec";
+            const formData = new URLSearchParams(new FormData(contatoForm));
+
+            try {
+              const response = await fetch(endpoint, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+                },
+                body: formData
+              });
+
+              if (!response.ok) throw new Error("Status " + response.status);
+              alert("Mensagem enviada com sucesso!");
+              contatoForm.reset();
+            } catch (error) {
+              console.error(error);
+              alert("Erro ao enviar. Verifique o console.");
+            }
+          });
         }
       });
     </script>
+
     <div vw class="enabled"></div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   </body>
