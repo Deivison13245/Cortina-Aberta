@@ -1,16 +1,23 @@
 {
-  "short_name": "Cortina Aberta",
-  "name": "Cortina Aberta - Companhia Teatral",
+  "name": "Teatro Cortina Aberta",
+  "short_name": "CortinaAberta",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0a0a",
+  "theme_color": "#8b0000",
+  "description": "Companhia Teatral Cortina Aberta - Espetáculos, Galeria e Programação.",
   "icons": [
     {
-      "src": "assets/images/placeholder/image-placeholder.svg",
-      "type": "image/svg+xml",
-      "sizes": "192x192 512x512"
+      "src": "assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
-  ],
-  "start_url": "/index.html",
-  "background_color": "#121212",
-  "theme_color": "#121212",
-  "display": "standalone",
-  "orientation": "portrait"
+  ]
 }

@@ -10,8 +10,12 @@
     <meta name="adopt-website-id" content="d6d87eef-5dee-43bc-a8ec-51c1b37114d2" />
 <script src="//tag.goadopt.io/injector.js?website_code=d6d87eef-5dee-43bc-a8ec-51c1b37114d2" 
 class="adopt-injector"></script>
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#121212">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#8b0000">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cortina Aberta">
+<link rel="apple-touch-icon" href="assets/images/icon-192.png">
 
     <!-- Google Tag Manager -->
     <script>
@@ -40,8 +44,8 @@ class="adopt-injector"></script>
 
     <title>Cortina Aberta | Palco Mambembe</title>
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="icon" href="assets/images/teatro.png" type="image/png" />
-    <link rel="shortcut icon" href="assets/images/teatro.png" type="image/png" />
+    <link rel="icon" href="assets/images/icon.png" type="image/png" />
+    <link rel="shortcut icon" href="assets/images/icon.png" type="image/png" />
   </head>
 
   <body>
@@ -205,49 +209,40 @@ class="adopt-injector"></script>
         </div>
       </section>
 
-      <section id="contato" class="page-section contact-panel">
+      <section id="contato" class="page-section">
         <div class="section-title">
-          <h2>Fale conosco</h2>
-          <p>Envie sua mensagem e entraremos em contato.</p>
+          <h2>Contato & Localização</h2>
+          <p>Venha nos visitar ou envie uma mensagem direta para a nossa produção.</p>
         </div>
 
-        <form
-          id="contato-form"
-          class="contact-form"
-          action="https://script.google.com/macros/s/AKfycbwfE9PINRQYXOedF_WqjxtwnV5z8lcmfQ_2T4yY2WzVF0JPgU_v48ezY9gij7Im45e4rw/exec"
-          method="POST"
-          target="hidden_iframe"
-        >
-          <label>
-            Nome
-            <input type="text" name="nome" required />
-          </label>
+        <div class="contact-wrapper">
+          <form class="contact-form" id="contactForm">
+            <label>
+              Nome
+              <input type="text" name="nome" placeholder="Seu nome completo" required />
+            </label>
+            <label>
+              E-mail
+              <input type="email" name="email" placeholder="seuemail@exemplo.com" required />
+            </label>
+            <label class="textarea-label">
+              Mensagem
+              <textarea name="mensagem" placeholder="Como podemos te ajudar?" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+          </form>
 
-          <label>
-            E-mail
-            <input type="email" name="email" required />
-          </label>
-
-          <label class="textarea-label">
-            Mensagem
-            <textarea name="mensagem" required></textarea>
-          </label>
-
-          <button type="submit">Enviar</button>
-        </form>
-
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
-        <div class="contact-info">
-          <p>Endereço: Av. Ver. João Silva, 38 - Centro, Santo Antônio de Jesus - BA, 44430-072</p>
-          <a
-            class="btn btn-secondary"
-            href="https://www.google.com/maps/search/?api=1&query=Av.+Ver.+Jo%C3%A3o+Silva,+38,+Santo+Ant%C3%B4nio+de+Jesus+BA"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            Ver no Google Maps
-          </a>
+          <div class="map-container">
+            <iframe
+              src="https://maps.google.com/maps?q=Av.%20Ver.%20Jo%C3%A3o%20Silva%2C%2038%20-%20Centro%2C%20Santo%20Ant%C3%B4nio%20de%20Jesus%20-%20BA%2C%2044430-072&hl=pt-BR&z=15&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+          </div>
         </div>
       </section>
     </main>
@@ -386,7 +381,7 @@ class="adopt-injector"></script>
           changeSlide("next");
         });
 
-        const contatoForm = document.getElementById("contato-form");
+        const contatoForm = document.getElementById("contactForm");
         if (contatoForm) {
           contatoForm.addEventListener("submit", async function (event) {
             event.preventDefault();
@@ -415,16 +410,16 @@ class="adopt-injector"></script>
       });
     </script>
 
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
 <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-    </script>
   </body>
 </html>
