@@ -6,9 +6,10 @@
     "build:css": "esbuild assets/css/style.css --minify --outdir=dist/assets/css",
     "build:js": "esbuild assets/js/main.js sw.js --minify --outdir=dist",
     "build:html": "html-minifier-terser --collapse-whitespace --remove-comments --minify-js true --minify-css true index.html -o dist/index.html",
-    "copy:assets": "cp -r assets/images assets/downloads manifest.json dist/ 2>/dev/null || xcopy assets\\images dist\\assets\\images\\ /E /I /Y && xcopy assets\\downloads dist\\assets\\downloads\\ /E /I /Y && copy manifest.json dist\\"
+    "copy:assets": "cpx \"assets/images/**/*\" dist/assets/images && cpx \"assets/downloads/**/*\" dist/assets/downloads && cpx manifest.json dist/"
   },
   "devDependencies": {
+    "cpx2": "^7.0.0",
     "esbuild": "^0.20.0",
     "html-minifier-terser": "^7.2.0",
     "rimraf": "^5.0.0"
