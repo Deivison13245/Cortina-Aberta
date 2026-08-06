@@ -1,0 +1,16 @@
+{
+  "short_name": "Cortina Aberta",
+  "name": "Cortina Aberta - Companhia Teatral",
+  "icons": [
+    {
+      "src": "assets/images/placeholder/image-placeholder.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#121212",
+  "theme_color": "#121212",
+  "display": "standalone",
+  "orientation": "portrait"
+}
